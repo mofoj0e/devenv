@@ -1,0 +1,35 @@
+# This is Git's per-user configuration file.
+[user]
+	
+[core]
+	editor = vim
+	algorithm = histogram
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --new-window --diff $LOCAL $REMOTE
+
+
+[alias]
+    lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(cyan)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lgl = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    stash-list = stash list --pretty=format:'%Cblue%gd%Cred: %C(yellow)%s'q
+
+	co = checkout
+	br = branch
+	
+    f = "!git ls-files | grep -i"
+    g = grep -p
+[user]
+    name = Joe Nguyen
+    email = joe.nguyen@smartvault.com
+
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
