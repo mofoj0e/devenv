@@ -4,6 +4,7 @@
 [core]
 	editor = vim
 	algorithm = histogram
+	whitepace = blank-at-eol, blank-at-eof
 [merge]
     tool = vscode
 [mergetool "vscode"]
